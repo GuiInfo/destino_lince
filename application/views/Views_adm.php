@@ -49,7 +49,7 @@
     $(() => {
         $('#btn_busca_nome').on('click', e => {
             let pesquisa = $('#busca_nome').val();
-            window.location.href = '<?= base_url("index.php/Controller_adm") ?>/' + pesquisa;
+            window.location.href = '<?= base_url("index.php/Controller_adm/index") ?>/' + pesquisa;
         });
     });
 
