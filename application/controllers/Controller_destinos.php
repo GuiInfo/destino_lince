@@ -3,9 +3,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Controller_destinos extends CI_Controller {
 
+    //FUNÇÃO CONSTRUTORA
 	public function __construct(){
 		parent::__construct();
-
+        //CARREGA JÁ A MODEL DESTINOS E DEFINE O NICK DE MODEL
         $this->load->model("Models_destinos", "model");
 	}
 
@@ -81,7 +82,6 @@ class Controller_destinos extends CI_Controller {
         if (!empty($id)) {
             $this->model->apagar($id);
         }
-
         redirect('index.php/Controller_adm');
     }
 }
