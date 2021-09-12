@@ -13,7 +13,7 @@
         <div class="w3-bar w3-dark-gray w3-large">
             <a href="<?= base_url('index.php/Controller_adm') ?>" class="w3-bar-item w3-margin" style="text-decoration:none">Pojeto Lince</a>
         </div>
-        <div class="w3-container w3-half w3-margin-top" style="width:15%;">
+        <div class="w3-container w3-half" style="width:30%; margin-left:35%; margin-top: 10%">
             <form class="w3-container w3-card-4" action="#" id="form_login" method="post">
                 <p>
                     <label>Usuario</label>
@@ -23,7 +23,7 @@
                     <label>Senha</label></p>
                     <input class="w3-input" type="password" name="senha" value="" style="width:100%" required>
                 <p>
-                <button type="submit" class="w3-button w3-section w3-teal w3-button w3-round-xlarge w3-green w3-margin">Login</button></p>
+                <button type="submit" class="w3-button w3-section  w3-button w3-round-xlarge w3-green w3-margin">Login</button></p>
             </form>
         </div>
     </body>

@@ -46,8 +46,8 @@ class Controller_adm extends CI_Controller {
             exit;
         }
 
-            $data['pesquisa'] = $pesquisa;
-		    $data['destinos'] = $this->Models_destinos->getDestinos($pesquisa);
+            $data['pesquisa'] = urldecode($pesquisa);
+		    $data['destinos'] = $this->Models_destinos->getDestinos($data['pesquisa']);
 
             $this->load->view('Views_adm', $data);
     }

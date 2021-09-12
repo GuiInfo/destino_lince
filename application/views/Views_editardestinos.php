@@ -11,12 +11,12 @@
 
 <!--INICIO BODY-->
     <body>
-        <div class="w3-bar w3-dark-gray w3-large">
+        <div class="w3-top w3-bar w3-dark-gray w3-large" style="position: fixed;">
             <a href="<?= base_url('index.php/Controller_adm') ?>" class="w3-bar-item w3-margin" style="text-decoration: none;">Pojeto Lince</a>
             <a href="<?= base_url("index.php/Controller_adm/logout") ?>" class="w3-bar-item w3-right w3-button w3-red w3-round-xlarge w3-margin">Sair</a>
         </div>
 
-        <form class="w3-container w3-card-4 w3-margin w3-margin-bottom" style="width:25%;" id="form_add" method="post">
+        <form class="w3-container w3-card-4" style="width:25%; margin-top:10%; margin-left: 40%" id="form_add" method="post">
             <div class="w3-container">
                 <h2> Editar Destino</h2>
             </div>
@@ -27,11 +27,11 @@
                     </p>
                     <p>      
                         <label class="w3-text-grey">Mini - Descrição</label>
-                        <input class="w3-input w3-border" type="text" name="minidescricao" value="<?php echo $destinos->minidescricao ?>" required="">
+                        <textarea class="w3-input w3-border" style="resize:none"type="text" name="minidescricao" required=""><?php echo $destinos->minidescricao ?></textarea>
                     </p>
                     <p>      
                         <label class="w3-text-grey">Descrição</label>
-                        <input class="w3-input w3-border" style="height: 70%" style="resize:none" type="text" name="descricao" value="<?php echo $destinos->descricao ?>">
+                        <textarea class="w3-input w3-border"  style="resize:none" type="text" name="descricao" required="" ><?php echo $destinos->descricao ?></textarea>
                     </p>
                     <p>      
                         <label class="w3-text-grey">Endereço</label>

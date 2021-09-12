@@ -21,11 +21,12 @@
         <?php $contador = 0 ?>
              <?php foreach ($destinos as $destino) : ?>
                 <br>
-                <div class="w3-container">
-                    <div class="w3-card-4 w3-col-s4" style="width:15%;">
+                <div class="w3-container w3-center">
+                    <div class="w3-card-4 w3-col-s4" style="width:30%; margin-left:35%; height: 150px ">
                         <header class="w3-container w3-center">
                         <h4><?= $destino->nome ?></h4>
-                        <a href="<?= base_url("index.php/Controller_destinos/formeditar/{$destino->id}") ?>" title="Editar Cadastro" class="w3-bar-item w3-margin w3-button w3-blue w3-round-xlarge">Editar</a>
+                        
+                        <a href="<?= base_url("index.php/Controller_destinos/formeditar/{$destino->id}") ?>" title="Editar Cadastro" class="w3-bar-item w3-margin w3-blue w3-button w3-round-xlarge">Editar</a>
                         <a href="<?= base_url("index.php/Controller_destinos/apagarDestino/{$destino->id}") ?>" title="Exlcuir" class="w3-bar-item w3-margin w3-button w3-red w3-round-xlarge">Excluir</a>
                         </header>
                     </div>

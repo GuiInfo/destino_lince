@@ -11,8 +11,8 @@ class Controller_destinos extends CI_Controller {
 	}
 
 	public function index($pesquisa = false){
-        $data['pesquisa'] = $pesquisa;
-		$data['destinos'] = $this->model->getDestinos($pesquisa);
+        $data['pesquisa'] = urldecode($pesquisa);
+		$data['destinos'] = $this->model->getDestinos($data['pesquisa']);
 
 		$this->load->view('Views_destinos', $data);
 	}

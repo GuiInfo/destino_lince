@@ -15,7 +15,7 @@
             <a href="<?= base_url("index.php/Controller_adm/logout") ?>" class="w3-bar-item w3-right w3-button w3-red w3-round-xlarge w3-margin">Sair</a>
         </div>
         <!--INICIO FORMULARIO DE INSERÇÃO DE DADOS-->
-        <form class="w3-container w3-card-4 w3-margin w3-margin-bottom" style="width:25%;" action="adddestino" name="form_add" method="post">
+        <form class="w3-container w3-card-4 " style="width:25%; margin-top:10%; margin-left: 40%" action="adddestino" name="form_add" method="post">
             <div class="w3-container">
                 <h2> Cadastrar Destino</h2>
             </div>
@@ -26,11 +26,11 @@
                     </p>
                     <p>      
                         <label class="w3-text-grey">Mini-Descrição</label>
-                        <input class="w3-input w3-border" style="resize:none" type="text" name="minidescricao" value="">
+                        <textarea class="w3-input w3-border" style="resize:none" type="text" name="minidescricao" value="" required=""></textarea>
                     </p>
                     <p>      
                         <label class="w3-text-grey">Descrição</label>
-                        <input class="w3-input w3-border" style="resize:none" type="text" name="descricao" value="">
+                        <textarea class="w3-input w3-border" style="resize:none" type="text" name="descricao" value="" required=""></textarea>
                     </p>
                     <p>      
                         <label class="w3-text-grey">Endereço</label>

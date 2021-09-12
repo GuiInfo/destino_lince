@@ -6,8 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     </head>
 <!--FIM HEAD-->
 <!--INICIO BODY-->
@@ -25,14 +23,14 @@
             <?php $contador = 0 ?>
                 <?php foreach ($destinos as $destinos) : ?>
                     <br>
-                    <div class="w3-container">
-                        <div class="w3-card-4" style="width:30%;">
+                    <div class="w3-container w3-center" style="margin-left: 30%">
+                        <div class="w3-card-4" style="width:50%;">
                             <header class="w3-container">
                                 <h4 class="w3-margin-top"><?= $destinos->nome ?></h4>
                             </header>
                             <div class="w3-container">
                                 <p>
-                                    <?= $destinos->minidescricao ?>
+                                    <textarea cols="50" rows="3" style="resize:none;border: 0"><?= $destinos->minidescricao ?></textarea>
                                 </p>
                             </div>  
                             <!--INICIO MODAL-->
