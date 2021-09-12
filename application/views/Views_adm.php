@@ -1,49 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
-
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand">NEXTSIZE</a>
-        <a href="<?= base_url('index.php/Controller_destinos/forminserir') ?>">Adicionar Destino </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            
-        </button>
+    <div class="w3-bar w3-dark-gray w3-large">
+        <a href="<?= base_url('index.php/Controller_adm') ?>" class="w3-bar-item w3-margin" style="text-decoration: none;">Pojeto Lince</a>
+        <input type="text" id="busca_nome" class="w3-bar-item w3-input w3-round-xlarge w3-margin" placeholder="Procurar Destinos" value="<?= $pesquisa ?>">
+        <button id="btn_busca_nome" class="w3-bar-item w3-button w3-green w3-round-xlarge w3-margin">Pesquisar</button>
+        <a href="<?= base_url('index.php/Controller_destinos/forminserir') ?>" class="w3-bar-item w3-button w3-blue w3-round-xlarge w3-margin">Adicionar Destino </a>
+        <a href="<?= base_url("index.php/Controller_adm/logout") ?>" class="w3-bar-item w3-right w3-button w3-red w3-round-xlarge w3-margin">Sair</a>
+    </div>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <input type="text" id="busca_nome" class="form-control mr-sm-5" placeholder="Buscar por nome do local" value="<?= $pesquisa ?>">
-            <button id="btn_busca_nome" class="btn btn-outline-success my-5 my-sm-0">Buscar</button>
-        </div>
-        <a href="<?= base_url("index.php/Controller_adm/logout") ?>" class="btn btn-danger">Sair</a>
-            
-    </nav>
-
-    
-    <!-Inicia a tabela para mostrar os dado do BD ->
         <?php $contador = 0 ?>
         <?php foreach ($destinos as $destino) : ?>
             <br>
-            <div class="card container" style="width: 70rem;">
-                <div class="card-body text-center">
-                    <h5 class="card-title"><?= $destino->nome ?></h5>
-                    <a href="<?= base_url("index.php/Controller_destinos/formeditar/{$destino->id}") ?>" title="Editar Cadastro" class=btn btn-primary">Editar</a>
-                    <a href="<?= base_url("index.php/Controller_destinos/apagarDestino/{$destino->id}") ?>" title="Exlcuir" class=btn btn-primary">Excluir</a>
+            <div class="w3-container">
+                <div class="w3-card-4" style="width:15%;">
+                    <header class="w3-container">
+                        <h4><?= $destino->nome ?></h4>
+                        <a href="<?= base_url("index.php/Controller_destinos/formeditar/{$destino->id}") ?>" title="Editar Cadastro" class="w3-bar-item w3-margin w3-button w3-blue w3-round-xlarge">Editar</a>
+                        <a href="<?= base_url("index.php/Controller_destinos/apagarDestino/{$destino->id}") ?>" title="Exlcuir" class="w3-bar-item w3-margin w3-button w3-red w3-round-xlarge">Excluir</a>
+                    </header>
+                    
                 </div>
-            </div>
+            </div> 
+
             <?php $contador++ ?>
         <?php endforeach ?>
 </body>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript">
     $(() => {
@@ -52,7 +40,6 @@
             window.location.href = '<?= base_url("index.php/Controller_adm/index") ?>/' + pesquisa;
         });
     });
-
 </script>
 
 </html>
