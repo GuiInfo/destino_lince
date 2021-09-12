@@ -24,7 +24,7 @@
             <input type="text" id="busca_nome" class="form-control mr-sm-5" placeholder="Buscar por nome do local" value="<?= $pesquisa ?>">
             <button id="btn_busca_nome" class="btn btn-outline-success my-5 my-sm-0">Buscar</button>
         </div>
-        <button id="" class="btn ">Sair</button>
+        <a href="<?= base_url("index.php/Controller_adm/logout") ?>" class="btn btn-danger">Sair</a>
             
     </nav>
 

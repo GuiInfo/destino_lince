@@ -33,6 +33,11 @@ class Controller_destinos extends CI_Controller {
     }
 
     public function formeditar($id){
+        if (!$this->session->userdata('logado')) {
+            redirect(base_url());
+            exit;
+        }
+
         $dados = [];
         $dados['destinos'] = $this->model->getID($id);
 

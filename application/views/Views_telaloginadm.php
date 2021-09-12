@@ -23,7 +23,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <form action="" name="form_add" method="post">
+            <form action="#" id="form_login" method="post">
                 <div class="row">
                     <div class="col-md-8">
                         <label>Usuário</label>
@@ -33,7 +33,7 @@
                 <div class="row">
                     <div class="col-md-8">
                         <label>Login</label>
-                            <input type="text" name="senha" value="" class="form-control">
+                            <input type="password" name="senha" value="" class="form-control">
                     </div>
                 </div>
                 <br />
@@ -46,5 +46,25 @@
         </div>
     </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(() => {
+        $('#form_login').submit(e => {
+            //não usar o submit do form
+            e.preventDefault();
+
+            let form = e.currentTarget;
+
+            $.post(`<?= base_url('index.php/Controller_adm/login') ?>`, $(form).serialize(), {}, 'json')
+                .done(ret => {
+                    window.alert(ret.message);
+                    if (ret.status) {
+                        window.location.href = '<?= base_url('index.php/Controller_adm') ?>';
+                    }
+                });
+        });
+    });
+
+</script>
 </html>
         
