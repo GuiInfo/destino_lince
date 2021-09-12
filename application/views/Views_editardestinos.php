@@ -23,6 +23,10 @@
                     <input class="w3-input w3-border" type="text" name="nome" value="<?php echo $destinos->nome ?>" required="">
                 </p>
                 <p>      
+                    <label class="w3-text-grey">Mini - Descrição</label>
+                    <input class="w3-input w3-border" type="text" name="minidescricao" value="<?php echo $destinos->minidescricao ?>" required="">
+                </p>
+                <p>      
                     <label class="w3-text-grey">Descrição</label>
                      <input class="w3-input w3-border" style="height: 70%" style="resize:none" type="text" name="descricao" value="<?php echo $destinos->descricao ?>">
                 </p>

@@ -21,8 +21,12 @@
                     <input class="w3-input w3-border" type="text" name="nome" value="" required="">
                 </p>
                 <p>      
+                    <label class="w3-text-grey">Mini-Descrição</label>
+                     <input class="w3-input w3-border" style="resize:none" type="text" name="minidescricao" value="">
+                </p>
+                <p>      
                     <label class="w3-text-grey">Descrição</label>
-                     <textarea class="w3-input w3-border" style="resize:none" type="text" name="descricao" value=""></textarea>
+                     <input class="w3-input w3-border" style="resize:none" type="text" name="descricao" value="">
                 </p>
                 <p>      
                     <label class="w3-text-grey">Endereço</label>

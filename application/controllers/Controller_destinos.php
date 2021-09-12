@@ -23,6 +23,7 @@ class Controller_destinos extends CI_Controller {
     public function adddestino(){
     
             $dados['nome'] = $this->input->post('nome');
+            $dados['minidescricao'] = $this->input->post('minidescricao');
             $dados['descricao'] = $this->input->post('descricao');
             $dados['endereco'] = $this->input->post('endereco');
 
@@ -57,6 +58,7 @@ class Controller_destinos extends CI_Controller {
 
             $dados = new stdClass();
             $dados->nome = $this->input->post('nome');
+            $dados->minidescricao = $this->input->post('minidescricao');
             $dados->descricao = $this->input->post('descricao');
             $dados->endereco = $this->input->post('endereco');
 

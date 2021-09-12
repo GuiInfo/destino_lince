@@ -25,19 +25,18 @@
         <?php foreach ($destinos as $destinos) : ?>
             <br>
             <div class="w3-container">
-                <div class="w3-card-4" style="width:35%;">
+                <div class="w3-card-4" style="width:30%;">
                     <header class="w3-container">
-                        
-                        <h4><?= $destinos->nome ?></h4>
+                        <h4 class="w3-margin-top"><?= $destinos->nome ?></h4>
                     </header>
                     <div class="w3-container">
-                        <p><?= $destinos->descricao ?></p>
+                        <p><?= $destinos->minidescricao ?></p>
                     </div>  
                     <button onclick="document.getElementById('id01<?= $destinos->id ?>').style.display='block'" class="w3-bar-item w3-button w3-round-xlarge w3-green w3-margin">Detalhes</button>
 
                     <div id="id01<?= $destinos->id ?>" class="w3-modal w3-animate-opacity">
                         <div class="w3-modal-content w3-card-4">
-                        <header class="w3-container w3-teal"> 
+                        <header class="w3-container w3-green"> 
                             <span onclick="document.getElementById('id01<?= $destinos->id ?>').style.display='none'" 
                             class="w3-button w3-large w3-display-topright">&times;</span>
                             <h2><?= $destinos->nome ?></h2>
